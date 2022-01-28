@@ -551,5 +551,15 @@ Si algunas de las Apis protegidas les genera este error:
 Se debe realizar la consulta del api http://localhost/test-extendeal/public/api/login   
 para obtener un nuevo token y cambiarlo en la herramienta usada para consumir los apis.
 
+## Herramientas usadas para desarrollo en entorno local.
+```
+1- PHP 7.3
+2- Base de Datos MYSQL 5.7.33
+3- Frameword Larevel 8.75
+4- Paquete para levantar los servicios, Laragon Full 5.0.0 
+5- Apache 2.4.47
+6- IDE: Visual Studio Code
+7- Herramienta para manipular la base de datos: HeidiSQL Portable 11.2.0
+```
 Nota: Si en la instalación del proyecto y la ejecución del composer, no se activan las librerías de JWTAuth, 
 se debe instalar  composer require tymon/jwt-auth:dev-develop --prefer-source, sin embargo no debe ser necesario ya que se sube en el composer. Esta librería es necesario para control de usuarios y protección por capas con el middleware. 
