@@ -114,8 +114,9 @@ php artisan config:cache
 
 
 ## --------------------------------------APIS DE USUARIOS------------------------
+
+## API PARA CREAR UN USUARIO
 ```
-##API PARA CREAR UN USUARIO
 http://localhost/test-extendeal/public/api/users   
 ```
 Configuración requerida:
@@ -232,7 +233,7 @@ Ejemplo
 ]
 ```
 
-## --------------------------------------APIS RESTful PARA ADMINISTRAR LOS CUADROS DE UN MUSEO------------------------
+## ----------------APIS RESTful PARA ADMINISTRAR LOS CUADROS DE UN MUSEO------------------------
 ```
 API PARA PROCESAR LOS CUADROS, para ello se creó con la técnica apiResource, el cual permite con una sola declaración de Route en el api.php, acceder a los distintos endpoints  para Crear, Consultar, Modificar y Borrar. 
 ```
