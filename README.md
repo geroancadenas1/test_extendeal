@@ -150,7 +150,7 @@ Respuesta que emite:
 ```
 El token se debe tomar para poder consumir las apis protegidas, también se puede obtener de la api login si no se copia el token de esta respuesta o si caduca en token.
 
-## **API PARA OBTENER EL TOKEN  
+## API PARA OBTENER EL TOKEN  
 ```
 http://localhost/test-extendeal/public/api/login  
 ```
@@ -172,7 +172,7 @@ Ejemplo
 }
 ```
 
-## **API PARA OBTENER DATOS DE AUTENTICACIÓN 
+## API PARA OBTENER DATOS DE AUTENTICACIÓN 
 ``` 
 http://localhost/test-extendeal/public/api/users/login
 ```
@@ -199,7 +199,7 @@ Ejemplo
 }
 ```
 
-## **API PARA CONSULTAR USUARIOS
+## API PARA CONSULTAR USUARIOS
 ```
 http://localhost/test-extendeal/public/api/users 
 ```
@@ -233,7 +233,7 @@ Ejemplo
 ]
 ```
 
-## ----------------APIS RESTful PARA ADMINISTRAR LOS CUADROS DE UN MUSEO------------------------
+## --------------APIS RESTful PARA ADMINISTRAR LOS CUADROS DE UN MUSEO-------------------
 ```
 API PARA PROCESAR LOS CUADROS, para ello se creó con la técnica apiResource, el cual permite con una sola declaración de Route en el api.php, acceder a los distintos endpoints  para Crear, Consultar, Modificar y Borrar. 
 ```
@@ -285,7 +285,7 @@ Ejemplo
 }
 ```
 
-## **PARA CONSULTA GENERAL:
+## PARA CONSULTA GENERAL:
 ```
 http://localhost/test-extendeal/public/api/cuadros
 ```
@@ -333,7 +333,7 @@ Ejemplo
 ```
 
 
-## **PARA CONSULTAR ESPECÍFICA:
+## PARA CONSULTAR ESPECÍFICA:
 ```
 http://localhost/test-extendeal/public/api/cuadros/1   
 Para traer un caudro en específico, se debe indicar el ID del cuadro al final de la URL  del api. 
@@ -368,7 +368,7 @@ Ejemplo
 }
 ```
 
-## **PARA MODIFICAR UN CUADRO:
+## PARA MODIFICAR UN CUADRO:
 ```
 http://localhost/test-extendeal/public/api/cuadros/1   
 Para modificar un caudro en específico, se debe indicar el ID del cuadro al final de la URL  del api. 
@@ -415,7 +415,7 @@ Ejemplo
 ```
 
 
-## **PARA ELIMINAR UN CUADRO:
+## PARA ELIMINAR UN CUADRO:
 ```
 http://localhost/test-extendeal/public/api/cuadros/2
 ```
@@ -448,7 +448,7 @@ Ejemplo
 }
 ```
 
-## -------------------------------API PARA LA CONSULTA DE CUADROS POR CRITERIOS DE BÚSQUEDA------------------------
+## --------API PARA LA CONSULTA DE CUADROS POR CRITERIOS DE BÚSQUEDA------------
 
 ```
 http://localhost/test-extendeal/public/api/consulta_cuadros_criterios?filters[titulo,autor,anio_creacion,]=Perifericos,Jeronimo Cadenas,2013&fields=costo,description,titulo,autor,cod_registro,costo
@@ -505,7 +505,7 @@ Ejemplo:
 ```
 
 
-## -----------API PARA LA CONSULTA DE STATUS PARA CONOCER EL PROMEDIO DE RESPUESTA DEL SERVICIO--------------
+## ----API PARA LA CONSULTA DE STATUS PARA CONOCER EL PROMEDIO DE RESPUESTA DEL SERVICIO-------
 ```
 http://localhost/test-extendeal/public/api/promedio_tiempo
 ```
