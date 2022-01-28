@@ -73,8 +73,9 @@ Estas instrucciones te permitirán obtener los pasos para instalación del proye
 ## Instalación
  Una vez clonado o descargado el proyecto, se debe ejecutar los siguientes comandos desde consola, dentro del proyecto
 
+```
  composer install
-
+```
  Base de Datos
 1) Se debe crear una base de datos en su servidor MySQL 
 
@@ -97,7 +98,7 @@ Estas instrucciones te permitirán obtener los pasos para instalación del proye
 php artisan migrate
 ```
   
-  En caso de querar actualizar la base de datos, se ejecuta el siguiente comando:
+  En caso de querer actualizar la base de datos, se debe ejecutar el siguiente comando:
 
 ```
 php artisan migrate:resfresh
@@ -118,6 +119,7 @@ API PARA CREAR UN USUARIO
 http://localhost/test-extendeal/public/api/users   
 ```
 Configuración requerida:
+```
 -Método POST  
 -En los Headers definir,  en el KEY = Content-Type  y Values= application/json
 -Para la validación y autenticación de usuario header X-HTTP-USER-ID,  se debe agregar en el Headers,  en el key=Authorization  y en el value=Bearer (TOKEN GENERADO AL INGRESAR EL USUARIO)
@@ -144,14 +146,15 @@ Respuesta que emite:
     },
     "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL3Rlc3QtZXh0ZW5kZWFsXC9wdWJsaWNcL2FwaVwvdXNlcnMiLCJpYXQiOjE2NDMzNzgxMzMsImV4cCI6MTY0MzM4MTczMywibmJmIjoxNjQzMzc4MTMzLCJqdGkiOiJ4VTNVUzlUakhpNTJXaFZLIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.7LyAmsuLScEPR7qNTBCzy2PrHKGbQZIAkA72e0fy8Ic"
 }
-
-El token se debe tomar para poder consumir las apis protegidas, también se puede obtener de la api login si no se copia de esta respuesta o si caduca en token.
+```
+El token se debe tomar para poder consumir las apis protegidas, también se puede obtener de la api login si no se copia el token de esta respuesta o si caduca en token.
 
 ```
 API PARA OBTENER EL TOKEN  
 http://localhost/test-extendeal/public/api/login  
 ```
 Configuración requerida:
+```
 -Método POST  
 -En los Headers definir,  en el KEY = Content-Type  y Values= application/json
 -En el body, se configura como raw  tipo json 
@@ -166,12 +169,15 @@ Ejemplo
 {
     "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL3Rlc3QtZXh0ZW5kZWFsXC9wdWJsaWNcL2FwaVwvbG9naW4iLCJpYXQiOjE2NDMzNzg0MzYsImV4cCI6MTY0MzM4MjAzNiwibmJmIjoxNjQzMzc4NDM2LCJqdGkiOiI4U3pseXozTXQ0R1JBdEtKIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Wy2ttR8ZgiFKD19_lm0O9N4h1XFtfxEZ8yd2trGE6QM"
 }
+```
+
 
 ```
 API PARA OBTENER DATOS DE AUTENTICACIÓN  
 http://localhost/test-extendeal/public/api/users/login
 ```
 Configuración requerida:
+```
 -Método POST  
 -En los Headers definir,  en el KEY = Content-Type  y Values= application/json
 -En el body, se configura como raw  tipo json 
@@ -191,14 +197,16 @@ Ejemplo
     "created_at": "2022-01-28T13:55:33.000000Z",
     "updated_at": "2022-01-28T13:55:33.000000Z"
 }
-
+```
 
 
 ```
 API PARA CONSULTAR USUARIOS
 http://localhost/test-extendeal/public/api/users 
 ```
+
 Configuración requerida:
+```
 -Método GET  
 -Api restringida por identificación de usuario: Se espera token para consumir el api. 
 -En los Headers definir,  en el KEY = Content-Type  y Values= application/json
@@ -224,7 +232,7 @@ Ejemplo
         "updated_at": "2022-01-28T14:12:47.000000Z"
     }
 ]
-
+```
 
 --------------------------------------APIS RESTful PARA ADMINISTRAR LOS CUADROS DE UN MUSEO------------------------
 API PARA PROCESAR LOS CUADROS, para ello se creó con la técnica apiResource, el cual permite con una sola declaración de Route en el api.php, acceder a los distintos endpoints  para Crear, Consultar, Modificar y Borrar. 
@@ -235,7 +243,9 @@ http://localhost/test-extendeal/public/api/cuadros
 
 PARA CREAR:
 ```
+
 Configuración requerida:
+```
 -Método POST  
 -Api restringida por identificación de usuario: Se espera token para consumir el api. 
 -Para la validación y autenticación de usuario header X-HTTP-USER-ID,  se debe agregar en el Headers,  en el key=Authorization  y en el value=Bearer (TOKEN GENERADO AL INGRESAR EL USUARIO)
@@ -273,7 +283,7 @@ Ejemplo
     "Respuesta": true,
     "Mensaje": "El cuadro fue agregado correctamenta"
 }
-
+```
 
 
 ```
@@ -281,6 +291,7 @@ PARA CONSULTA GENETRAL:
 http://localhost/test-extendeal/public/api/cuadros
 ```
 Configuración requerida:
+```
 -Método GET  
 -Api restringida por identificación de usuario: Se espera token para consumir el api. 
 -Para la validación y autenticación de usuario header X-HTTP-USER-ID,  se debe agregar en el Headers,  en el key=Authorization  y en el value=Bearer (TOKEN GENERADO AL INGRESAR EL USUARIO)
@@ -320,6 +331,8 @@ Ejemplo
     ],
     "Mensaje": "Listado de cuadros en el museo"
 }
+```
+
 
 
 ```
@@ -327,7 +340,9 @@ PARA CONSULTAR ESPECÍFICA:
 http://localhost/test-extendeal/public/api/cuadros/1   
 Para traer un caudro en específico, se debe indicar el ID del cuadro al final de la URL  del api. 
 ```
+
 Configuración requerida:
+```
 -Método GET  
 -Api restringida por identificación de usuario: Se espera token para consumir el api. 
 -Para la validación y autenticación de usuario header X-HTTP-USER-ID,  se debe agregar en el Headers,  en el key=Authorization  y en el value=Bearer (TOKEN GENERADO AL INGRESAR EL USUARIO)
@@ -353,7 +368,7 @@ Ejemplo
     "Mensaje": "Se efectuó la consulta específica de forma correcta",
     "OTRO VALOR": "EL OTRO VALOR"
 }
-
+```
 
 
 ```
@@ -361,7 +376,9 @@ PARA MODIFICAR UN CUADRO:
 http://localhost/test-extendeal/public/api/cuadros/1   
 Para modificar un caudro en específico, se debe indicar el ID del cuadro al final de la URL  del api. 
 ```
+
 Configuración requerida:
+```
 -Método PUT  
 -Api restringida por identificación de usuario: Se espera token para consumir el api.
 -Para la validación y autenticación de usuario header X-HTTP-USER-ID,  se debe agregar en el Headers,  en el key=Authorization  y en el value=Bearer (TOKEN GENERADO AL INGRESAR EL USUARIO)
@@ -398,6 +415,7 @@ Ejemplo
     "Respuesta": true,
     "Mensaje": "Se modificaron los datos del cuadro de forma correcta"
 }
+```
 
 
 
@@ -405,7 +423,9 @@ Ejemplo
 PARA ELIMINAR UN CUADRO:
 http://localhost/test-extendeal/public/api/cuadros/2
 ```
+
 Configuración requerida:
+```
 -Método DELETE  
 -Api restringida por identificación de usuario: Se espera token para consumir el api.
 -Para la validación y autenticación de usuario header X-HTTP-USER-ID,  se debe agregar en el Headers,  en el key=Authorization  y en el value=Bearer (TOKEN GENERADO AL INGRESAR EL USUARIO)
@@ -430,6 +450,7 @@ Ejemplo
     "Respuesta": true,
     "Mensaje": "Se eliminaron los datos del cuadro de forma correcta"
 }
+```
 
 -------------------------------API PARA LA CONSULTA DE CUADROS POR CRITERIOS DE BÚSQUEDA------------------------
 
@@ -438,6 +459,7 @@ http://localhost/test-extendeal/public/api/consulta_cuadros_criterios?filters[ti
 
 ```
 Configuración requerida:
+```
 -Método GET  
 -Api restringida por identificación de usuario: Se espera token para consumir el api.
 -Para la validación y autenticación de usuario header X-HTTP-USER-ID,  se debe agregar en el Headers,  en el key=Authorization  y en el value=Bearer (TOKEN GENERADO AL INGRESAR EL USUARIO)
@@ -484,12 +506,16 @@ Ejemplo:
     "costo": 20000,
     "description": "Pintura de los primeros servidores de computadoras"
 }
+```
+
 
 -----------API PARA LA CONSULTA DE STATUS PARA CONOCER EL PROMEDIO DE RESPUESTA DEL SERVICIO--------------
 ```
 http://localhost/test-extendeal/public/api/promedio_tiempo
 ```
+
 Configuración requerida:
+```
 -Método GET  
 -Api restringida por identificación de usuario: Se espera token para consumir el api.
 -Para la validación y autenticación de usuario header X-HTTP-USER-ID,  se debe agregar en el Headers,  en el key=Authorization  y en el value=Bearer (TOKEN GENERADO AL INGRESAR EL USUARIO)
@@ -515,6 +541,8 @@ Respuesta que emite:
         }
     ]
 }
+```
+
 
 
 ```
