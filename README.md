@@ -233,7 +233,7 @@ Ejemplo
 ]
 ```
 
-## --------------APIS RESTful PARA ADMINISTRAR LOS CUADROS DE UN MUSEO-------------------
+## ---------APIS RESTful PARA ADMINISTRAR LOS CUADROS DE UN MUSEO------------
 ```
 API PARA PROCESAR LOS CUADROS, para ello se creó con la técnica apiResource, el cual permite con una sola declaración de Route en el api.php, acceder a los distintos endpoints  para Crear, Consultar, Modificar y Borrar. 
 ```
@@ -505,7 +505,7 @@ Ejemplo:
 ```
 
 
-## ----API PARA LA CONSULTA DE STATUS PARA CONOCER EL PROMEDIO DE RESPUESTA DEL SERVICIO-------
+## ----API DE CONSULTA DE STATUS PARA EL PROMEDIO DE RESPUESTA DEL SERVICIO-------
 ```
 http://localhost/test-extendeal/public/api/promedio_tiempo
 ```
